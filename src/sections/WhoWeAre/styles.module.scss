@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, var(--white) 50%, #f5f5f5 50%);
+  min-height: 720px;
+  padding: 100px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-style: normal;
+    margin-bottom: 48px;
+  }
+
+  .content {
+    display: flex;
+    position: relative;
+
+    .image {
+      display: flex;
+      width: 50%;
+      column-gap: 8px;
+
+      .form {
+        height: 100%;
+        width: 100px;
+        background-image: url(https://digicop-demo.pbminfotech.com/demo2/wp-content/uploads/sites/3/2020/05/dsvy-pattern-bg-1.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-color: var(--main) !important;
+      }
+
+      figure {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .circle {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      border-radius: 100%;
+      width: 78px;
+      height: 78px;
+      background-color: var(--main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 38px;
+        height: 38px;
+
+        path {
+          fill: var(--white);
+        }
+      }
+    }
+
+    .textContent {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 80px;
+      background-color: var(--white);
+      row-gap: 16px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0.5px;
+        text-transform: none;
+        font-style: normal;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 32px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}

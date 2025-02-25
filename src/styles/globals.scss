@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Barlow', sans-serif;
+  color: var(--text-primary);
+}
+
+:root {
+  --white: #fff;
+
+  --main: #c01120;
+  --text-primary: #0c121d;
+  --text-alternative: #0c121d;
+  --text-secondary: #646c71;
+  --text-tertiary: #acafb2;
+  --border: #ffffff21;
+
+  --background: #ffffff;
+  --background-alternative: #1a191d;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  background: var(--background-alternative);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-transform: none;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: inside;
+  row-gap: 16px;
+
+  li {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    text-transform: none;
+    font-style: normal;
+
+    &::marker {
+      color: var(--main) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  p,
+  ul li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  ul {
+    row-gap: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  p,
+  ul li {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  ul {
+    row-gap: 20px;
+  }
+}

@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 100px 100px;
+  background-color: var(--white);
+  width: 100%;
+
+  h1 {
+    margin-bottom: 48px;
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    column-gap: 32px;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      row-gap: 16px;
+
+      input {
+        height: 56px;
+        padding: 0px 16px;
+        border: 1px solid var(--text-tertiary);
+        border-radius: 8px;
+      }
+
+      textarea {
+        height: 200px;
+        padding: 16px;
+        border: 1px solid var(--text-tertiary);
+        border-radius: 8px;
+        resize: none;
+      }
+    }
+  }
+}

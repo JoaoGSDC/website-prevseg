@@ -1,0 +1,108 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.carouselContainer {
+  .container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    width: 50%;
+    min-height: 100vh;
+    flex-direction: column;
+    row-gap: 8px;
+
+    .title {
+      font-size: 4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .titleMarked {
+      font-size: 4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: var(--white);
+      background-color: var(--main);
+      padding: 0px 8px;
+      width: fit-content;
+    }
+
+    .hollowText {
+      display: flex;
+      font-size: 4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--white);
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  column-gap: 16px;
+  margin-top: 16px;
+}
+
+.buttonPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background-color: var(--white);
+  padding: 0px 40px;
+  color: var(--text-primary);
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--main);
+    color: var(--white);
+  }
+}
+
+.buttonSecondary {
+  @extend .buttonPrimary;
+
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+
+  &:hover {
+    border: var(--main);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 50vh;
+  }
+}

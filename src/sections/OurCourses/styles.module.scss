@@ -1,0 +1,247 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  min-height: 720px;
+  padding: 100px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  position: relative;
+
+  .content {
+    width: 75%;
+    margin-left: -25%;
+
+    .textContent {
+      display: flex;
+      padding-bottom: 0px;
+      flex-direction: column;
+      padding: 0px 100px;
+      padding-bottom: 48px;
+    }
+
+    .title {
+      display: flex;
+
+      h1 {
+        width: 75%;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-style: normal;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        text-transform: none;
+        font-style: normal;
+      }
+    }
+
+    .courses {
+      display: flex;
+      z-index: 2;
+      position: relative;
+      left: 100px;
+      background-color: var(--white);
+      gap: 16px;
+      flex-wrap: wrap;
+      border-radius: 8px;
+      width: calc(100% - 64px);
+
+      .course {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 30%;
+        padding: 30px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        row-gap: 16px;
+
+        margin-bottom: 0;
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+
+        min-width: 300px;
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          svg {
+            width: 70px;
+            height: 70px;
+            fill: var(--main);
+          }
+
+          span {
+            font-family: Barlow Condensed, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 70px;
+            line-height: 70px;
+            color: #f2f3f3;
+          }
+        }
+
+        .courseContent {
+          display: flex;
+          row-gap: 16px;
+          flex-direction: column;
+
+          h1,
+          h4 {
+            line-height: 1.5em;
+            min-height: 3em;
+          }
+
+          p {
+            line-height: 1.5em;
+            min-height: 4.5em;
+          }
+
+          h4 {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 500;
+            color: #646c71;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-family: Barlow, sans-serif;
+          }
+
+          h1 {
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+
+          a {
+            font-size: 13px;
+            line-height: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              cursor: pointer;
+              color: var(--main);
+            }
+          }
+
+          hr {
+            border: none;
+            border-bottom: 1px solid #e8e8e8;
+          }
+        }
+
+        h3 {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 30px;
+          margin-top: 16px;
+        }
+
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 1.7;
+          color: var(--text-secondary);
+          text-transform: none;
+          font-style: normal;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: var(--main);
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    width: 25%;
+    padding: 100px;
+    row-gap: 8px;
+    background-image: url('/images/background-2.jpg');
+    background-blend-mode: soft-light;
+
+    h2 {
+      color: var(--white);
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+      text-align: center;
+      text-transform: uppercase;
+
+      font-family: 'Barlow Condensed', Sans-serif;
+    }
+
+    h1 {
+      color: var(--white);
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 32px;
+
+    .content {
+      width: 100%;
+      margin: 0px;
+
+      .textContent {
+        padding: 0px;
+      }
+
+      .title {
+        flex-direction: column;
+
+        h1 {
+          width: 100%;
+          text-align: center;
+        }
+
+        p {
+          margin: 16px 0px;
+        }
+      }
+
+      .courses {
+        position: initial;
+      }
+    }
+
+    .contact {
+      display: none !important;
+    }
+  }
+}
