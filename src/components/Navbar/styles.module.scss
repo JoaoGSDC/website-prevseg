@@ -283,6 +283,8 @@
       height: 120px;
 
       .optionsContainer {
+        justify-content: space-between;
+
         button {
           background-color: transparent;
           border: none;
