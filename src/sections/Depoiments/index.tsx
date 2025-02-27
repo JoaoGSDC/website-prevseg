@@ -9,7 +9,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 
 const Depoiments: React.FC = () => {
   const [openModal, setOpenModal] = React.useState(false);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: 2 });
+  const isMobile = window.innerWidth <= 768;
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: isMobile ? 1 : 2 });
 
   const depoiments = [
     {
@@ -100,18 +101,19 @@ const Depoiments: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
 
-      <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-        <iframe
-          src="https://www.youtube.com/embed/JosO2gnv0A8?si=4E0cx084YtZrLH_s"
-          title="Academia Monte Castelo"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </Modal>
+        <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+          <iframe
+            id="iframe"
+            src="https://www.youtube.com/embed/JosO2gnv0A8?si=4E0cx084YtZrLH_s"
+            title="Academia Monte Castelo"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </Modal>
+      </section>
     </>
   );
 };

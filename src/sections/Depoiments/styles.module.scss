@@ -232,3 +232,60 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0px;
+    position: relative;
+
+    .video {
+      width: 100%;
+      padding: 80px 132px 200px;
+
+      h1 {
+        text-align: center;
+      }
+    }
+
+    .depoiments {
+      z-index: 1001;
+      flex-direction: column;
+
+      .title {
+        width: 100%;
+
+        h1 {
+          font-size: 32px;
+          line-height: 36px;
+        }
+      }
+
+      .depoimentContainer {
+        width: 100%;
+        padding: 32px;
+
+        .depoimentHeader {
+          p {
+            font-size: 1rem;
+          }
+
+          .buttons {
+            button {
+              width: 52px;
+              padding: 0px;
+            }
+          }
+        }
+
+        .depoimentContent {
+          margin-left: -24px;
+          width: calc(100% + 48px);
+
+          .embla__slide {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

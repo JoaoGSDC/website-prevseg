@@ -26,7 +26,7 @@ const Carousel = ({ items }: { items: CarouselItem[] }) => {
     <>
       <div className={styles.carousel}>
         {items.map((item, index) => (
-          <div key={index}>
+          <div key={index} className={styles.items}>
             {index === currentIndex && (
               <div className={styles.carouselContainer}>
                 <div className={styles.container}>

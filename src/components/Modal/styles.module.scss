@@ -50,9 +50,19 @@
   }
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   .modalContent {
-    width: 95%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
+
+    iframe {
+      width: 90%;
+    }
+  }
+
+  .modalOverlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
   }
 }

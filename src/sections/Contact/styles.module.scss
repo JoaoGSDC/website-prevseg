@@ -39,3 +39,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 32px;
+
+    h1 {
+      text-align: center;
+    }
+
+    .content {
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+}

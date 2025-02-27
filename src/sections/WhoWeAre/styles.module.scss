@@ -100,5 +100,34 @@
     h1 {
       text-align: center;
     }
+
+    .content {
+      flex-direction: column;
+
+      .image {
+        flex-direction: column;
+        width: calc(100% + 64px);
+        margin-left: -32px;
+
+        .form {
+          height: 100px;
+          width: 100%;
+        }
+
+        figure {
+          width: 100%;
+          aspect-ratio: 4 / 5;
+        }
+      }
+
+      .circle {
+        display: none;
+      }
+
+      .textContent {
+        width: 100%;
+        padding: 40px 0px;
+      }
+    }
   }
 }

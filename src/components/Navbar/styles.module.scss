@@ -17,7 +17,6 @@
     }
   }
 
-  /* Parte de Cima */
   .navbarTop {
     display: flex;
     justify-content: space-between;
@@ -125,7 +124,6 @@
     }
   }
 
-  /* Parte de Baixo */
   .navbarBottom {
     display: flex;
     justify-content: space-between;
@@ -172,6 +170,71 @@
     }
   }
 
+  .mobileMenu {
+    background-color: var(--background-alternative);
+    width: 90%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .closeMenu {
+      background-color: transparent;
+      border: none;
+      width: 32px;
+      height: 32px;
+
+      svg {
+        fill: var(--white);
+        font-size: 32px;
+      }
+    }
+
+    a {
+      border-bottom: 1px solid var(--border);
+      padding: 8px 0px;
+      width: 100%;
+
+      p {
+        font-family: Barlow, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        color: var(--white);
+        text-transform: uppercase;
+        font-style: normal;
+        padding: 15px 25px;
+        height: auto;
+        display: inline-block;
+        margin: 0 14px;
+      }
+    }
+
+    .socialMedia {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 32px;
+      margin-top: 16px;
+
+      a {
+        border: none;
+        width: auto;
+
+        svg {
+          font-size: 1.5rem;
+          fill: var(--text-tertiary);
+        }
+      }
+    }
+  }
+
   &.scrolled {
     .navbarTop {
       opacity: 0;
@@ -195,11 +258,19 @@
         }
       }
     }
+
+    .hamburger {
+      svg {
+        fill: var(---text-primary);
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 600px) {
   .navbar {
+    z-index: 1002;
+
     figure {
       height: 48px;
     }
@@ -209,7 +280,7 @@
     }
 
     .navbarBottom {
-      height: 88px;
+      height: 120px;
 
       .optionsContainer {
         button {

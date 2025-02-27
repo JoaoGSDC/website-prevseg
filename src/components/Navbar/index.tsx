@@ -5,8 +5,17 @@ import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaMagnifyingGlass, FaMapLocationDot, FaRegMessage, FaBars } from 'react-icons/fa6';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaMagnifyingGlass,
+  FaMapLocationDot,
+  FaRegMessage,
+  FaBars,
+  FaWhatsapp,
+} from 'react-icons/fa6';
 import { scrollToSection } from '@/utils/scrollToSection';
+import { IoClose } from 'react-icons/io5';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -111,6 +120,10 @@ const Navbar = () => {
 
       {isMobile && menuOpen && (
         <div className={styles.mobileMenu}>
+          <button className={styles.closeMenu} onClick={toggleMenu}>
+            <IoClose />
+          </button>
+
           <Link href="/" onClick={toggleMenu}>
             <p>INÍCIO</p>
           </Link>
@@ -154,6 +167,20 @@ const Navbar = () => {
           >
             <p>CONTATO</p>
           </a>
+
+          <div className={styles.socialMedia}>
+            <a href="https://api.whatsapp.com/send?phone=5519974102924" target="_blank">
+              <FaWhatsapp />
+            </a>
+
+            <a href="https://www.instagram.com/academiamontecastelooficial/" target="_blank">
+              <FaInstagram />
+            </a>
+
+            <a href="https://www.facebook.com/academiamontecastelo" target="_blank">
+              <FaFacebook />
+            </a>
+          </div>
         </div>
       )}
     </nav>

@@ -33,15 +33,13 @@ const WhoWeAre: React.FC = () => {
             Contando com uma equipe especializada de instrutores credenciados pela Polícia Federal, com formação em
             academias militares e civis, além de especializações internacionais.
           </p>
-          <p>
-            <ul>
-              <li>Estande de tiro indoor automatizado</li>
-              <li>Sala fitness e tatames para defesa pessoal</li>
-              <li>Salas de aula e auditório climatizados</li>
-              <li>CFTV com câmeras Bosch e sala de rádio comunicação</li>
-              <li>Alojamentos masculinos e femininos</li>
-            </ul>
-          </p>
+          <ul>
+            <li>Estande de tiro indoor automatizado</li>
+            <li>Sala fitness e tatames para defesa pessoal</li>
+            <li>Salas de aula e auditório climatizados</li>
+            <li>CFTV com câmeras Bosch e sala de rádio comunicação</li>
+            <li>Alojamentos masculinos e femininos</li>
+          </ul>
         </div>
       </div>
     </section>
