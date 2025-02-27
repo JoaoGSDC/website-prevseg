@@ -9,7 +9,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 
 const Depoiments: React.FC = () => {
   const [openModal, setOpenModal] = React.useState(false);
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: isMobile ? 1 : 2 });
 
   const depoiments = [
