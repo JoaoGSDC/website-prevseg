@@ -26,7 +26,7 @@ async function fetchPost(slug: string): Promise<BlogPostProps | undefined> {
   }
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: any) {
   const post = await fetchPost(params.slug);
 
   if (!post) {
