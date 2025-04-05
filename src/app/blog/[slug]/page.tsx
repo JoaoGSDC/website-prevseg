@@ -19,7 +19,8 @@ async function fetchPost(slug: string): Promise<BlogPostProps | undefined> {
     return {
       title: 'A Importância da Boa Formação',
       image: 'https://academiamontecastelo.com.br/wp-content/uploads/2020/01/post-1.jpg',
-      content: '<p>Não só a força física, mas a inteligência é essencial para a atividade...</p>',
+      content:
+        '<p>Não só a força física, mas a inteligência é essencial para a atividade. Neste ramo de atuação, é incontestável que exista a necessidade de uma boa formação em academias especializadas de vigilantes, isso não apenas para cumprir a exigência do mercado, após formação, o profissional deverá estar preparado e capacitado a ser empregado em setores públicos ou privados, armados ou desarmados.</p><p>A principal etapa é formar-se no curso de Vigilante em uma instituição de credibilidade e respeito, sendo reconhecida no mercado e autorizada pelo Departamento de Policia Federal.</p>',
     };
   } catch (error: any) {
     console.error(error);
