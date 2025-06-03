@@ -23,7 +23,7 @@ const fetchPosts = async (search?: string) => {
   }
 };
 
-const Blog = async ({ searchParams }: { searchParams: { [key: string]: string } }) => {
+const Blog = async ({ searchParams }: any) => {
   const search = searchParams.search || '';
   const content = await fetchPosts(search);
 
