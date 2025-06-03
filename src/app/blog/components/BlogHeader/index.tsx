@@ -6,7 +6,7 @@ const BlogHeader: React.FC = () => {
   return (
     <div className={styles.header}>
       <figure>
-        <Image src="/images/blog-posts-cover.png" alt="Blog Cover" layout="fill" objectFit="cover" />
+        <Image src="/images/blog-posts-cover.jpg" alt="Blog Cover" layout="fill" objectFit="cover" />
       </figure>
 
       <div className={styles.text}>
