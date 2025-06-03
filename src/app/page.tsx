@@ -5,8 +5,29 @@ import LastBlogPosts from '@/sections/LastBlogPosts';
 import WhoWeAre from '@/sections/WhoWeAre';
 import Depoiments from '@/sections/Depoiments';
 import Contact from '@/sections/Contact';
+import { IPost } from '@/interfaces/post.interface';
+import { notFound } from 'next/navigation';
+import api from '@/services/api';
 
-export default function Home() {
+const getLatestPosts = async () => {
+  try {
+    const res = await api.get<IPost[]>(`/posts/last`);
+    const posts = res.data;
+
+    return posts;
+  } catch (error) {
+    console.error('Error fetching latest posts:', error);
+    return [];
+  }
+};
+
+export default async function Home() {
+  const lastestPosts: IPost[] = await getLatestPosts();
+
+  if (!lastestPosts || lastestPosts.length === 0) {
+    notFound();
+  }
+
   return (
     <>
       <div className={styles.page}>
@@ -26,31 +47,7 @@ export default function Home() {
 
           <OurCourses />
 
-          <LastBlogPosts
-            posts={[
-              {
-                id: 1,
-                title: 'A Importância da Boa Formação',
-                excerpt:
-                  'Não só a força física, mas a inteligência é essencial para a atividade. Neste ramo de atuação, é incontestável que exista a necessidade de uma boa formação em academias especializadas de vigilantes, isso não apenas para cumprir a exigência do mercado, após formação, o profissional deverá estar preparado e capacitado a ser empregado em setores',
-                imageUrl: '/images/background-2.jpg',
-              },
-              {
-                id: 2,
-                title: 'A Importância da Boa Formação',
-                excerpt:
-                  'Não só a força física, mas a inteligência é essencial para a atividade. Neste ramo de atuação, é incontestável que exista a necessidade de uma boa formação em academias especializadas de vigilantes, isso não apenas para cumprir a exigência do mercado, após formação, o profissional deverá estar preparado e capacitado a ser empregado em setores',
-                imageUrl: '/images/background-2.jpg',
-              },
-              {
-                id: 3,
-                title: 'A Importância da Boa Formação',
-                excerpt:
-                  'Não só a força física, mas a inteligência é essencial para a atividade. Neste ramo de atuação, é incontestável que exista a necessidade de uma boa formação em academias especializadas de vigilantes, isso não apenas para cumprir a exigência do mercado, após formação, o profissional deverá estar preparado e capacitado a ser empregado em setores',
-                imageUrl: '/images/background-2.jpg',
-              },
-            ]}
-          />
+          <LastBlogPosts posts={lastestPosts} />
 
           <WhoWeAre />
 

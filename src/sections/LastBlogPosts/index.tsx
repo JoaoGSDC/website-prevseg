@@ -5,14 +5,10 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 import { FaRegNewspaper } from 'react-icons/fa6';
 import Link from 'next/link';
+import { IPost } from '@/interfaces/post.interface';
 
 interface LastBlogPostsProps {
-  posts?: {
-    id: number;
-    title: string;
-    excerpt: string;
-    imageUrl: string;
-  }[];
+  posts?: IPost[];
 }
 
 const LastBlogPosts: React.FC<LastBlogPostsProps> = ({ posts }) => {
@@ -24,11 +20,11 @@ const LastBlogPosts: React.FC<LastBlogPostsProps> = ({ posts }) => {
 
       <div className={styles.cards}>
         {posts?.map((post) => (
-          <Link href={'#'} key={post.id} className={styles.card}>
+          <Link href={'#'} key={post?._id} className={styles.card}>
             <figure className={styles.figure}>
               <Image
-                src={post.imageUrl}
-                alt={post.title}
+                src={post?.image}
+                alt={post?.title}
                 layout="responsive"
                 width={500}
                 height={300}
@@ -40,8 +36,8 @@ const LastBlogPosts: React.FC<LastBlogPostsProps> = ({ posts }) => {
               <div className={styles.block}>
                 <FaRegNewspaper />
               </div>
-              <h2 className={styles.title}>{post.title}</h2>
-              <p className={styles.excerpt}>{post.excerpt}</p>
+              <h2 className={styles.title}>{post?.title}</h2>
+              <p className={styles.excerpt}>{post?.excerpt}</p>
             </div>
           </Link>
         ))}

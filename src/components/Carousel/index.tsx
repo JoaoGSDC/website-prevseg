@@ -18,8 +18,8 @@ const Carousel = ({ items }: { items: CarouselItem[] }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 10000); // Troca de imagem a cada 10 segundos
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    }, 10000);
+    return () => clearInterval(interval);
   }, [items.length]);
 
   return (

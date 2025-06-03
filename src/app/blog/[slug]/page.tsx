@@ -5,30 +5,33 @@ import BlogHeader from '../components/BlogHeader';
 import BlogFilters from '../components/BlogFilters';
 import Image from 'next/image';
 import LastBlogPosts from '@/sections/LastBlogPosts';
+import { IPost } from '@/interfaces/post.interface';
+import api from '@/services/api';
 
-interface BlogPostProps {
-  title: string;
-  content: string;
-  image: string;
-}
-
-async function fetchPost(slug: string): Promise<BlogPostProps | undefined> {
+async function fetchPost(slug: string) {
   try {
-    // Simulação de chamada à API
-    console.log('slug recebido:', slug);
-    return {
-      title: 'A Importância da Boa Formação',
-      image: 'https://academiamontecastelo.com.br/wp-content/uploads/2020/01/post-1.jpg',
-      content:
-        '<p>Não só a força física, mas a inteligência é essencial para a atividade. Neste ramo de atuação, é incontestável que exista a necessidade de uma boa formação em academias especializadas de vigilantes, isso não apenas para cumprir a exigência do mercado, após formação, o profissional deverá estar preparado e capacitado a ser empregado em setores públicos ou privados, armados ou desarmados.</p><p>A principal etapa é formar-se no curso de Vigilante em uma instituição de credibilidade e respeito, sendo reconhecida no mercado e autorizada pelo Departamento de Policia Federal.</p>',
-    };
+    const res = await api.get<IPost>(`/posts/${slug}`);
+    return res.data;
   } catch (error: any) {
     console.error(error);
   }
 }
 
+const getLatestPosts = async () => {
+  try {
+    const res = await api.get<IPost[]>(`/posts/last`);
+    const posts = res.data;
+
+    return posts;
+  } catch (error) {
+    console.error('Error fetching latest posts:', error);
+    return [];
+  }
+};
+
 export default async function BlogPost({ params }: any) {
   const post = await fetchPost(params.slug);
+  const latestPosts = await getLatestPosts();
 
   if (!post) {
     notFound();
@@ -47,35 +50,14 @@ export default async function BlogPost({ params }: any) {
             </figure>
           </div>
 
-          <div className={styles.text} dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div className={styles.text} dangerouslySetInnerHTML={{ __html: post.content as string }} />
         </div>
 
         <BlogFilters />
       </div>
 
       <div className={styles.lastPosts}>
-        <LastBlogPosts
-          posts={[
-            {
-              id: 1,
-              title: 'A Importância da Boa Formação',
-              excerpt: 'Não só a força física, mas a inteligência é essencial para a atividade...',
-              imageUrl: '/images/background-2.jpg',
-            },
-            {
-              id: 2,
-              title: 'A Importância da Boa Formação',
-              excerpt: 'Não só a força física, mas a inteligência é essencial para a atividade...',
-              imageUrl: '/images/background-2.jpg',
-            },
-            {
-              id: 3,
-              title: 'A Importância da Boa Formação',
-              excerpt: 'Não só a força física, mas a inteligência é essencial para a atividade...',
-              imageUrl: '/images/background-2.jpg',
-            },
-          ]}
-        />
+        <LastBlogPosts posts={latestPosts} />
       </div>
 
       <div className={styles.divider} />
