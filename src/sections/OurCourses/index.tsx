@@ -1,26 +1,26 @@
+'use client';
+
 import styles from './styles.module.scss';
-import button from '../../styles/button.module.scss';
-import { GiPistolGun, GiPoliceOfficerHead } from 'react-icons/gi';
-import { PiCertificateFill, PiSecurityCameraFill } from 'react-icons/pi';
-import { FaTruck } from 'react-icons/fa6';
+import { GiFactory, GiHealthNormal, GiHomeGarage, GiPartyPopper, GiShoppingBag, GiTeacher } from 'react-icons/gi';
 import Link from 'next/link';
 import Subtitle from '@/components/Subtitle';
-import { AiFillAlert } from 'react-icons/ai';
+import { scrollToSection } from '@/utils/scrollToSection';
 
 export default function OurCourses() {
   return (
     <section id="cursos" className={styles.container}>
       <div className={styles.content}>
         <div className={styles.textContent}>
-          <Subtitle text="Nossos cursos" />
+          <Subtitle text="Onde atuamos" />
 
           <div className={styles.title}>
-            <h1>Conheça nossos cursos</h1>
+            <h1>Áreas de atuação</h1>
 
             <p>
-              Oferecemos cursos especializados para formar vigilantes altamente capacitados, preparados para atuar com
-              excelência e profissionalismo. Nossa missão é garantir a sua qualificação com treinamento completo e
-              atualizado, seguindo todas as normas de segurança.
+              Atuamos com excelência em segurança patrimonial, pessoal e eletrônica, oferecendo soluções completas e
+              personalizadas para cada cliente. Nossa missão é proteger com eficiência e responsabilidade, garantindo
+              tranquilidade e confiança por meio de equipes treinadas, tecnologia de ponta e rigoroso cumprimento das
+              normas de segurança.
             </p>
           </div>
         </div>
@@ -28,98 +28,114 @@ export default function OurCourses() {
         <div className={styles.courses}>
           <div className={styles.course}>
             <div className={styles.image}>
-              <GiPoliceOfficerHead />
+              <GiHomeGarage />
               <span>☆</span>
             </div>
 
             <div className={styles.courseContent}>
-              <h4>Excelência em Segurança Privada</h4>
-              <h1>Formação de vigilantes</h1>
+              <h4>Proteção 24 horas por dia</h4>
+              <h1>Condomínios residenciais e empresariais</h1>
               <hr />
-              <p>Capacite-se em vigilância, segurança patrimonial, defesa pessoal e uso de armamento.</p>
-              <Link href="#">Ver mais +</Link>
+              <p>Segurança preventiva e controle de acesso para proteger moradores, visitantes e patrimônios.</p>
+              <button onClick={() => scrollToSection('contato')}>
+                <Link href="#">Ver mais +</Link>
+              </button>
             </div>
           </div>
 
           <div className={styles.course}>
             <div className={styles.image}>
-              <PiCertificateFill />
+              <GiHealthNormal />
               <span>☆</span>
             </div>
 
             <div className={styles.courseContent}>
-              <h4>Atualização e Recapacitação em Segurança Privada</h4>
-              <h1>Reciclagem de vigilantes</h1>
+              <h4>Cuidado com segurança</h4>
+              <h1>Clínicas e hospitais</h1>
               <hr />
-              <p>Reforce habilidades em vigilância, defesa pessoal e uso de armamentos.</p>
-              <Link href="#">Ver mais +</Link>
+              <p>
+                Controle de fluxo e vigilância especializada para ambientes de saúde com foco em proteção e bem-estar.
+              </p>
+              <button onClick={() => scrollToSection('contato')}>
+                <Link href="#">Ver mais +</Link>
+              </button>
             </div>
           </div>
 
           <div className={styles.course}>
             <div className={styles.image}>
-              <PiSecurityCameraFill />
+              <GiPartyPopper />
               <span>☆</span>
             </div>
 
             <div className={styles.courseContent}>
-              <h4>Formação em Operação de Sistemas de Monitoramento</h4>
-              <h1>Operador de CFTV</h1>
+              <h4>Segurança para grandes públicos</h4>
+              <h1>Eventos em geral</h1>
               <hr />
-              <p>Aprenda a operar câmeras PTZ e equipamentos BOSCH com simulações práticas.</p>
-              <Link href="#">Ver mais +</Link>
+              <p>
+                Planejamento estratégico e equipes treinadas para garantir a segurança de eventos de todos os portes.
+              </p>
+              <button onClick={() => scrollToSection('contato')}>
+                <Link href="#">Ver mais +</Link>
+              </button>
             </div>
           </div>
 
           <div className={styles.course}>
             <div className={styles.image}>
-              <AiFillAlert />
+              <GiFactory />
               <span>☆</span>
             </div>
 
             <div className={styles.courseContent}>
-              <h4>Liderança e Gestão em Segurança</h4>
-              <h1>Supervisão, Chefia e Segurança</h1>
+              <h4>Proteção do patrimônio empresarial</h4>
+              <h1>Empresas e indústrias</h1>
               <hr />
-              <p>Aprenda liderança, análise de risco e técnicas para supervisão eficiente.</p>
-              <Link href="#">Ver mais +</Link>
+              <p>
+                Soluções de vigilância para áreas industriais e corporativas, com foco na prevenção de riscos e perdas.
+              </p>
+              <button onClick={() => scrollToSection('contato')}>
+                <Link href="#">Ver mais +</Link>
+              </button>
             </div>
           </div>
 
           <div className={styles.course}>
             <div className={styles.image}>
-              <GiPistolGun />
+              <GiTeacher />
               <span>☆</span>
             </div>
+
             <div className={styles.courseContent}>
-              <h4>Preparação para Operações de Escolta Armada</h4>
-              <h1>Escolta Armada</h1>
+              <h4>Ambiente seguro para aprender</h4>
+              <h1>Instituições de ensino</h1>
               <hr />
-              <p>Capacite-se em prevenção, reação e uso de armamentos específicos.</p>
-              <Link href="#">Ver mais +</Link>
+              <p>Presença vigilante e protocolos de segurança adaptados para escolas, faculdades e universidades.</p>
+              <button onClick={() => scrollToSection('contato')}>
+                <Link href="#">Ver mais +</Link>
+              </button>
             </div>
           </div>
 
           <div className={styles.course}>
             <div className={styles.image}>
-              <FaTruck />
+              <GiShoppingBag />
               <span>☆</span>
             </div>
+
             <div className={styles.courseContent}>
-              <h4>Formação Especializada em Transporte de Valores</h4>
-              <h1>Transporte de Valores</h1>
+              <h4>Segurança e conforto para clientes</h4>
+              <h1>Shoppings</h1>
               <hr />
-              <p>Aprenda segurança, reação e práticas com armamentos e carro-forte.</p>
-              <Link href="#">Ver mais +</Link>
+              <p>
+                Vigilância estratégica, controle de acessos e suporte para uma experiência segura em centros comerciais.
+              </p>
+              <button onClick={() => scrollToSection('contato')}>
+                <Link href="#">Ver mais +</Link>
+              </button>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className={styles.contact}>
-        <h2>Seja um profissional destacado</h2>
-        <h1>{`(19) 9 7410-2924`}</h1>
-        <button className={button.primaryAlternative}>saiba mais</button>
       </div>
     </section>
   );

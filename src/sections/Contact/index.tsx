@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
         </form>
 
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3684.8147022663925!2d-47.378772!3d-22.548613!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fdfeecccebf6b1%3A0xe30c62ec78f271eb!2sAcademia%20Monte%20Castelo!5e0!3m2!1spt-BR!2sbr!4v1738373492662!5m2!1spt-BR!2sbr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.263005002458!2d-47.4083415!3d-22.5692646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c880f369ac0105%3A0x8ba3761550b46ac0!2sPrevseg%20Seguran%C3%A7a%20Privada!5e0!3m2!1spt-BR!2sbr!4v1748977797173!5m2!1spt-BR!2sbr"
           style={{ border: 0, flex: 1 }}
           allowFullScreen
           loading="lazy"

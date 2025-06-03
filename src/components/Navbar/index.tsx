@@ -58,22 +58,22 @@ const Navbar = () => {
         <div className={styles.optionsContainer}>
           <div className={styles.contact}>
             <FaRegMessage />
-            {`Entre em contato: (19) 9 7410-2924`}
+            {`Entre em contato: (19) 34426055`}
           </div>
 
           <div className={styles.address}>
             <FaMapLocationDot />
-            {`R. Laurente Cia, 94, Jd. Porto Real IV, Limeira-SP`}
+            {`Av. Dr. Alfredo Ferraz de Abreu, 1394, Centro, Limeira-SP`}
           </div>
         </div>
 
         <div className={styles.optionsContainer}>
           <div className={styles.socialMedia}>
-            <a href="https://www.instagram.com/academiamontecastelooficial/" target="_blank">
+            <a href="https://www.instagram.com/prevseglimeira/" target="_blank">
               <FaInstagram />
             </a>
 
-            <a href="https://www.facebook.com/academiamontecastelo" target="_blank">
+            <a href="https://www.facebook.com/prevseglimeira" target="_blank">
               <FaFacebook />
             </a>
           </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
       <div className={styles.navbarBottom}>
         <div className={styles.optionsContainer}>
           <figure>
-            {!scrolled ? <Image src="/logo.png" alt="logo" fill /> : <Image src="/logo-black.png" alt="logo" fill />}
+            <Image src="/logo.png" alt="logo" fill />
           </figure>
 
           {isMobile ? (

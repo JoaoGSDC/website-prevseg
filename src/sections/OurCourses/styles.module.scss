@@ -14,8 +14,7 @@
   position: relative;
 
   .content {
-    width: 75%;
-    margin-left: -25%;
+    width: 100%;
 
     .textContent {
       display: flex;
@@ -23,13 +22,17 @@
       flex-direction: column;
       padding: 0px 100px;
       padding-bottom: 48px;
+
+      text-align: center;
+      width: 100%;
     }
 
     .title {
       display: flex;
+      flex-direction: column;
 
       h1 {
-        width: 75%;
+        width: 100%;
         font-weight: 700;
         font-size: 40px;
         line-height: 50px;
@@ -50,14 +53,12 @@
 
     .courses {
       display: flex;
-      z-index: 2;
-      position: relative;
-      left: 100px;
       background-color: var(--white);
       gap: 16px;
       flex-wrap: wrap;
       border-radius: 8px;
-      width: calc(100% - 64px);
+      width: 100%;
+      padding: 0px 72px;
 
       .course {
         display: flex;
@@ -136,16 +137,21 @@
             text-transform: uppercase;
           }
 
-          a {
-            font-size: 13px;
-            line-height: 23px;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: all 0.3s ease-in-out;
+          button {
+            background-color: transparent;
+            border: none;
 
-            &:hover {
-              cursor: pointer;
-              color: var(--main);
+            a {
+              font-size: 13px;
+              line-height: 23px;
+              font-weight: 700;
+              text-transform: uppercase;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                cursor: pointer;
+                color: var(--main);
+              }
             }
           }
 

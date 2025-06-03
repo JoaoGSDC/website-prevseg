@@ -2,7 +2,7 @@ import Subtitle from '@/components/Subtitle';
 import React from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
-import { FaFortAwesome } from 'react-icons/fa6';
+import { GiEagleHead } from 'react-icons/gi';
 
 const WhoWeAre: React.FC = () => {
   return (
@@ -20,26 +20,22 @@ const WhoWeAre: React.FC = () => {
         </div>
 
         <div className={styles.circle}>
-          <FaFortAwesome />
+          <GiEagleHead />
         </div>
 
         <div className={styles.textContent}>
-          <h2>Academia Monte Castelo</h2>
+          <h2>PrevSeg</h2>
           <p>
-            A Academia Monte Castelo, autorizada pelo Departamento de Polícia Federal, forma vigilantes e profissionais
-            de segurança privada com excelência desde 2014 em Limeira-SP.
+            A PREVSEG é uma empresa de segurança privada especializada em vigilância patrimonial, devidamente autorizada
+            pelo Departamento de Polícia Federal (DPF) para atuar no setor. Com ampla experiência e compromisso com a
+            legalidade, a PREVSEG possui o Certificado de Regularidade de Situação de Funcionamento de Segurança
+            Especializada, emitido pelo DECADE/DPCRD da Secretaria de Segurança Pública do Estado de São Paulo.
           </p>
           <p>
-            Contando com uma equipe especializada de instrutores credenciados pela Polícia Federal, com formação em
-            academias militares e civis, além de especializações internacionais.
+            Além disso, a empresa conta com o Certificado de Regularidade de Segurança (CRS) concedido pelo SESVESP
+            (Sindicato das Empresas de Segurança Privada do Estado de São Paulo), reforçando seu compromisso com a
+            conformidade legal e a excelência nos serviços prestados.
           </p>
-          <ul>
-            <li>Estande de tiro indoor automatizado</li>
-            <li>Sala fitness e tatames para defesa pessoal</li>
-            <li>Salas de aula e auditório climatizados</li>
-            <li>CFTV com câmeras Bosch e sala de rádio comunicação</li>
-            <li>Alojamentos masculinos e femininos</li>
-          </ul>
         </div>
       </div>
     </section>
