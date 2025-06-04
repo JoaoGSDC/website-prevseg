@@ -31,8 +31,8 @@ export default async function Home() {
             items={[
               {
                 image: '/images/background-1.jpg',
-                hollowText: 'Invista no',
-                title: 'seu futuro',
+                hollowText: 'Confiança',
+                title: 'e credibilitadade',
                 titleMarked: 'profissional',
                 buttonPrimary: 'Saiba mais',
                 buttonSecondary: 'Entrar em contato',
