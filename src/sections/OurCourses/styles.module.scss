@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--background);
   min-height: 720px;
   padding: 100px;
   width: 100%;
@@ -53,7 +53,7 @@
 
     .courses {
       display: flex;
-      background-color: var(--white);
+      background-color: var(--background);
       gap: 16px;
       flex-wrap: wrap;
       border-radius: 8px;
@@ -72,8 +72,8 @@
         row-gap: 16px;
 
         margin-bottom: 0;
-        border: 1px solid #e8e8e8;
-        background-color: #fff;
+        border: 1px solid #10111c;
+        background-color: var(--background);
 
         min-width: 300px;
 
@@ -100,7 +100,7 @@
             font-style: normal;
             font-size: 70px;
             line-height: 70px;
-            color: #f2f3f3;
+            color: #10111c;
           }
         }
 
@@ -157,7 +157,7 @@
 
           hr {
             border: none;
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom: 1px solid #10111c;
           }
         }
 

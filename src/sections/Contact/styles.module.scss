@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 0px 100px 100px;
-  background-color: var(--white);
+  background-color: var(--background);
   width: 100%;
 
   h1 {
@@ -27,14 +27,19 @@
         padding: 0px 16px;
         border: 1px solid var(--text-tertiary);
         border-radius: 8px;
+        border: 1px solid #10111c;
+        background-color: var(--background);
+        font-size: 1rem;
       }
 
       textarea {
         height: 200px;
         padding: 16px;
-        border: 1px solid var(--text-tertiary);
         border-radius: 8px;
         resize: none;
+        border: 1px solid #10111c;
+        background-color: var(--background);
+        font-size: 1rem;
       }
     }
   }
