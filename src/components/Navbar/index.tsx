@@ -105,7 +105,7 @@ const Navbar = () => {
               </a>
 
               <a onClick={() => scrollToSection('cursos')}>
-                <p>CURSOS</p>
+                <p>SEGMENTOS</p>
               </a>
 
               <Link href="/blog">
@@ -113,7 +113,7 @@ const Navbar = () => {
               </Link>
 
               <a onClick={() => scrollToSection('depoimentos')}>
-                <p>DEPOIMENTOS</p>
+                <p>TRABALHE CONOSCO</p>
               </a>
 
               <a onClick={() => scrollToSection('contato')}>
@@ -149,7 +149,7 @@ const Navbar = () => {
               toggleMenu();
             }}
           >
-            <p>CURSOS</p>
+            <p>SEGMENTOS</p>
           </a>
 
           <Link href="/blog" onClick={toggleMenu}>
@@ -162,7 +162,7 @@ const Navbar = () => {
               toggleMenu();
             }}
           >
-            <p>DEPOIMENTOS</p>
+            <p>TRABALHE CONOSCO</p>
           </a>
 
           <a

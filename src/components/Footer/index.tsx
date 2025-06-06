@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           </p>
 
           <p className={styles.option} onClick={() => scrollToSection('cursos')}>
-            CURSOS
+            SEGMENTOS
           </p>
 
           <Link href="/blog">
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
           </Link>
 
           <p className={styles.option} onClick={() => scrollToSection('depoimentos')}>
-            DEPOIMENTOS
+            TRABALHE CONOSCO
           </p>
 
           <p className={styles.option} onClick={() => scrollToSection('contato')}>
