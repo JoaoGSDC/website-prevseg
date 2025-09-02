@@ -97,13 +97,49 @@ const Navbar = () => {
                 <p>INÍCIO</p>
               </Link>
 
-              <a onClick={() => scrollToSection('quem-somos')}>
-                <p>QUEM SOMOS</p>
-              </a>
+              <div className={styles.dropdown}>
+                <a onClick={() => scrollToSection('quem-somos')}>
+                  <p>SOBRE NÓS</p>
+                </a>
 
-              <a onClick={() => scrollToSection('cursos')}>
-                <p>SEGMENTOS</p>
-              </a>
+                <div className={styles.dropdownContent}>
+                  <Link href="/quem-somos">
+                    <p>Quem somos</p>
+                  </Link>
+                </div>
+              </div>
+
+              <div className={styles.dropdown}>
+                <a onClick={() => scrollToSection('cursos')}>
+                  <p>SEGMENTOS</p>
+                </a>
+
+                <div className={styles.dropdownContent}>
+                  <Link href="/segmentos/condominios">
+                    <p>Condomínios residenciais e empresariais</p>
+                  </Link>
+
+                  <Link href="/segmentos/clinicas">
+                    <p>Clínicas e hospitais</p>
+                  </Link>
+
+                  <Link href="/segmentos/eventos">
+                    <p>Eventos em geral</p>
+                  </Link>
+
+                  <Link href="/segmentos/empresas">
+                    <p>Empresas e indústrias</p>
+                  </Link>
+
+                  <Link href="/segmentos/educacao">
+                    <p>Instituições de ensino</p>
+                  </Link>
+
+                  <Link href="/segmentos/shoppings">
+                    <p>Shoppings</p>
+                  </Link>
+                </div>
+              </div>
 
               <Link href="/blog">
                 <p>BLOG</p>
@@ -131,23 +167,23 @@ const Navbar = () => {
             <p>INÍCIO</p>
           </Link>
 
-          <a
+          <Link
             onClick={() => {
-              scrollToSection('quem-somos');
               toggleMenu();
             }}
+            href="/quem-somos"
           >
             <p>QUEM SOMOS</p>
-          </a>
+          </Link>
 
-          <a
+          <Link
             onClick={() => {
-              scrollToSection('cursos');
               toggleMenu();
             }}
+            href="/cursos/formacao-de-vigilantes"
           >
             <p>SEGMENTOS</p>
-          </a>
+          </Link>
 
           <Link href="/blog" onClick={toggleMenu}>
             <p>BLOG</p>
